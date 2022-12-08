@@ -24,3 +24,5 @@ git mv main.js js/                                 ----> move file from root fol
 git mv js/main.js ./                               ----> move file from js folder to root folder
 git mv index.html main.html                        ----> change file name (git mv existingFileName newFileName)
 git mv js/main.html ./test.js                      ----> move main.html file from js folder to root folder and rename it to test.js (fatality!!!)
+
+git restore abc.js                                 ----> restore file from last commit (first add file and commit it !)
