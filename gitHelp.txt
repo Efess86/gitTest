@@ -20,6 +20,7 @@ git commit -m "Test message"                       ----> add commit with message
 
 git diff index.html                                ----> show changes
 
-git mv index.html main.html                        ----> change file name
-
-git 
+git mv main.js js/                                 ----> move file from root folder to js folder
+git mv js/main.js ./                               ----> move file from js folder to root folder
+git mv index.html main.html                        ----> change file name (git mv existingFileName newFileName)
+git mv js/main.html ./test.js                      ----> move main.html file from js folder to root folder and rename it to test.js (fatality!!!)
