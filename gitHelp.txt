@@ -1,0 +1,25 @@
+https://git-scm.com/download/win                   ----> download git 
+
+Create directory (folder) and open git bash in this folder
+
+git init                                           ----> initialize git in your directory
+git config user.name "Kolpaxidis V. (home PC)"     ----> configure git by adding your name
+git config user.email kolpaxidis86@gmail.com       ----> configure git by adding your email
+
+git status                                         ----> check file status
+
+git log                                            ----> show commits
+
+git add                                            ----> add file as tracked (add file to git)
+git add .                                          ----> add all file as tracked (add all file to git)
+git add file.js                                    ----> add file as tracked by name
+git add folder/file.js                             ----> add file as tracked by name in folder
+
+git commit                                         ----> add commit
+git commit -m "Test message"                       ----> add commit with message
+
+git diff index.html                                ----> show changes
+
+git mv index.html main.html                        ----> change file name
+
+git 
