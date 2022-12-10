@@ -9,11 +9,13 @@ After git commit you can upload changes to server by using git push (see more ab
 
 https://git-scm.com/download/win                   ----> download git 
 
-Create directory (folder) and open git bash in this folder
+Create folder (folder) and open git bash in this folder
 
 git init                                           ----> initialize git in your directory
 git config user.name "Kolpaxidis V. (home PC)"     ----> configure git by adding your name
 git config user.email kolpaxidis86@gmail.com       ----> configure git by adding your email
+
+								##### LOCAL WORK #####
 
 					*** Show information ***
 git status                                         ----> check file status
@@ -33,6 +35,8 @@ Always git add file to add new changes.
 git rm abc.js                                      ----> delete abc.js file and goes to index (or stage status)
 git restore --staged abc.js                        ----> restore to prev status (remove abc.js from index)
 git restore abc.js                                 ----> restore abc.js file (first you need to remove it from index by git restore --stage abc.js)
+git checkout abc.js                                ----> erase changes and restore to last commit
+git reset --hard 005d83b2...                       ----> restore to commit with hash 005d83b2... and erase all newest commits
 
 					*** Rename, change folder ***
 git mv main.js js/                                 ----> move file from root folder to js folder
@@ -43,11 +47,22 @@ git mv js/main.html ./test.js                      ----> move main.html file fro
 					*** Commit ***
 git commit                                         ----> add commit
 git commit -m "Test message"                       ----> add commit with message
+git checkout 005d83b2aa63846aa272c6b25a1458cc958cb91d -> go to commit with hash 005d83b...
 
 					*** Branch ***
 git branch dev                                     ----> create new branch with name dev
 git checkout dev                                   ----> change branch to dev (go to branch dev)
-git branch --delete dev                            ----> delete branch
+git checkout -b dev                                ----> create branch dev and go on it (the same of 2 commands git branch dev AND git checkout dev)
+git checkout -b dev 005d83b2...                    ----> create new branch with name dev from commit with hash 005d83b2...
+git branch --delete dev || git branch -d dev       ----> delete branch
+git branch -a                                      ----> shows all branches and show where we are now
+git merge dev                                      ----> merge dev with branch where you are now (now we are in master)
+
+
+
+								##### SERVER WORK #####
+
+								
 
 					*** .gitignore file ***
 ### My template
