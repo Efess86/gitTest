@@ -1,3 +1,12 @@
+Before start using git!
+There are 3 stages in git.
+1. (Brown color) Untracked, non added or modified - when you have files that was changed or deleted or created. Any changes that you can imagine.
+2. (Green color) Index status or stage status - when you add changed files to index or stage status by "git add filename" command
+3. (No color) Succesfully added to git (commit) - when you add staged or index files to git by using git "commit filename"
+It's local changes not server!!!
+
+After git commit you can upload changes to server by using git push (see all more about git push below)
+
 https://git-scm.com/download/win                   ----> download git 
 
 Create directory (folder) and open git bash in this folder
@@ -26,3 +35,7 @@ git mv index.html main.html                        ----> change file name (git m
 git mv js/main.html ./test.js                      ----> move main.html file from js folder to root folder and rename it to test.js (fatality!!!)
 
 git restore abc.js                                 ----> restore file from last commit (first add file and commit it !)
+
+git rm abc.js                                      ----> delete abc.js file and goes root to index (or stage status)
+git restore --staged abc.js                        ----> restore prev status with abc.js in directory
+git restore
