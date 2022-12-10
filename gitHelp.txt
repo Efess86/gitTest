@@ -5,7 +5,7 @@ There are 3 stages in git.
 3. (No color) Succesfully added to git (commit) - when you add staged or index files to git by using git "commit filename"
 It's local changes not server!!!
 
-After git commit you can upload changes to server by using git push (see all more about git push below)
+After git commit you can upload changes to server by using git push (see more about git push below)
 
 https://git-scm.com/download/win                   ----> download git 
 
@@ -34,8 +34,6 @@ git mv js/main.js ./                               ----> move file from js folde
 git mv index.html main.html                        ----> change file name (git mv existingFileName newFileName)
 git mv js/main.html ./test.js                      ----> move main.html file from js folder to root folder and rename it to test.js (fatality!!!)
 
+git rm abc.js                                      ----> delete abc.js file and goes to index (or stage status)
+git restore --staged abc.js                        ----> restore abc.js file and goes to prev status
 git restore abc.js                                 ----> restore file from last commit (first add file and commit it !)
-
-git rm abc.js                                      ----> delete abc.js file and goes root to index (or stage status)
-git restore --staged abc.js                        ----> restore prev status with abc.js in directory
-git restore
