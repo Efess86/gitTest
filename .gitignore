@@ -1,0 +1,16 @@
+### My template
+
+#ignore folder log
+log/
+
+#ignore folder img
+img/
+
+#ignore all zip files
+*.zip
+
+#ignore products.json in resources folder
+resources/products.json
+
+#ignore all files with .pyc, .pyo, .pyd
+*.py[cod]
