@@ -1,10 +1,10 @@
 Before start using git!
 There are 3 stages in git.
-1. (Brown color) Untracked, non added or modified - when you have files that was changed or deleted or created. Any changes that you can imagine.
-2. (Green color) Index status or stage status - when you add changed files to index or stage status by "git add filename" command
-3. (No color) Succesfully added to git (commit) - when you add staged or index files to git by using git "commit filename"
+1. Deleted, non added or modified - when you have files that was changed or deleted or created. Any changes that you can imagine.
+2. Index status or stage status - when you add changed files to index or stage status by "git add filename" command
+3. Add to git (commit) - when you add staged or index files to git by using git "commit filename"
 It's local changes not server!!!
-
+------------------------------------------
 After git commit you can upload changes to server by using git push (see more about git push below)
 
 https://git-scm.com/download/win                   ----> download git 
@@ -15,25 +15,30 @@ git init                                           ----> initialize git in your 
 git config user.name "Kolpaxidis V. (home PC)"     ----> configure git by adding your name
 git config user.email kolpaxidis86@gmail.com       ----> configure git by adding your email
 
+					*** Show information ***
 git status                                         ----> check file status
-
 git log                                            ----> show commits
+git diff index.html                                ----> show changes
 
+					*** Track/untrack files ****
 git add                                            ----> add file as tracked (add file to git)
 git add .                                          ----> add all file as tracked (add all file to git)
 git add file.js                                    ----> add file as tracked by name
 git add folder/file.js                             ----> add file as tracked by name in folder
+git rm --cached abc.js                             ----> remove abc.js from tracked files (make file untracked)
+					
+					*** Delete/Restore files ***
+git rm abc.js                                      ----> delete abc.js file and goes to index (or stage status)
+git restore --staged abc.js                        ----> restore to prev status (remove abc.js from index)
+git restore abc.js                                 ----> restore abc.js file (first you need to remove it from index by git restore --stage abc.js)
 
-git commit                                         ----> add commit
-git commit -m "Test message"                       ----> add commit with message
-
-git diff index.html                                ----> show changes
-
+					*** Rename, change folder ***
 git mv main.js js/                                 ----> move file from root folder to js folder
 git mv js/main.js ./                               ----> move file from js folder to root folder
 git mv index.html main.html                        ----> change file name (git mv existingFileName newFileName)
 git mv js/main.html ./test.js                      ----> move main.html file from js folder to root folder and rename it to test.js (fatality!!!)
 
-git rm abc.js                                      ----> delete abc.js file and goes to index (or stage status)
-git restore --staged abc.js                        ----> restore abc.js file and goes to prev status
-git restore abc.js                                 ----> restore file from last commit (first add file and commit it !)
+git commit                                         ----> add commit
+git commit -m "Test message"                       ----> add commit with message
+
+
