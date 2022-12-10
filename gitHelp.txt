@@ -26,6 +26,8 @@ git add .                                          ----> add all file as tracked
 git add file.js                                    ----> add file as tracked by name
 git add folder/file.js                             ----> add file as tracked by name in folder
 git rm --cached abc.js                             ----> remove abc.js from tracked files (make file untracked)
+If you add file to index (by git add) and after that change it git will commit staff only before git add.
+Always git add file to add new changes.
 					
 					*** Delete/Restore files ***
 git rm abc.js                                      ----> delete abc.js file and goes to index (or stage status)
@@ -38,12 +40,14 @@ git mv js/main.js ./                               ----> move file from js folde
 git mv index.html main.html                        ----> change file name (git mv existingFileName newFileName)
 git mv js/main.html ./test.js                      ----> move main.html file from js folder to root folder and rename it to test.js (fatality!!!)
 
+					*** Commit ***
 git commit                                         ----> add commit
 git commit -m "Test message"                       ----> add commit with message
 
-
-If you add file to index (by git add) and after that change it git will commit staff only before git add.
-Always git add file to add new changes.
+					*** Branch ***
+git branch dev                                     ----> create new branch with name dev
+git checkout dev                                   ----> change branch to dev (go to branch dev)
+git branch --delete dev                            ----> delete branch
 
 					*** .gitignore file ***
 ### My template
