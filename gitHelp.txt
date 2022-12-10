@@ -42,3 +42,23 @@ git commit                                         ----> add commit
 git commit -m "Test message"                       ----> add commit with message
 
 
+If you add file to index (by git add) and after that change it git will commit staff only before git add.
+Always git add file to add new changes.
+
+					*** .gitignore file ***
+### My template
+
+#ignore folder log
+log/
+
+#ignore folder img
+img/
+
+#ignore all zip files
+*.zip
+
+#ignore products.json in resources folder
+resources/products.json
+
+#ignore all files with .pyc, .pyo, .pyd
+*.py[cod]
