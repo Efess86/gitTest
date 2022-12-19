@@ -4,7 +4,7 @@ There are 3 stages in git.
 2. Index status or stage status - when you add changed files to index or stage status by "git add test.js" command
 3. Add to git (commit) - when you add staged or index files to git by using "git commit test.js"
 It's local changes not server!!!
-------------------------------------------
+-----------------------------------------------------------------------------------------------
 After git commit you can upload changes to server by using git push (see more about git push below)
 
 https://git-scm.com/download/win                   ----> download git and install it
@@ -12,8 +12,8 @@ https://git-scm.com/download/win                   ----> download git and instal
 Create folder (or open folder) and open "git bash" (right click) in this folder
 
 git init                                           ----> initialize git in your directory
-git config user.name "Kolpaxidis V. (home PC)"     ----> configure git by adding your name
-git config user.email kolpaxidis86@gmail.com       ----> configure git by adding your email
+git config user.name "Surname Name"                ----> configure git by adding your name
+git config user.email email-adress@email.com       ----> configure git by adding your email
 
 								##### LOCAL WORK #####
 
@@ -47,7 +47,7 @@ git mv js/main.html ./test.js                      ----> move main.html file fro
 					*** Commit ***
 git commit                                         ----> add commit
 git commit -m "Test message"                       ----> add commit with message
-git checkout 005d83b2aa63846aa272c6b25a1458cc958cb91d -> go to commit with hash 005d83b...
+git checkout 005d83b2aa6384272c6b25a1458cc958cb91d ----> go to commit with hash 005d83b...
 
 					*** Branch ***
 git branch dev                                     ----> create new branch with name dev
@@ -61,8 +61,15 @@ git merge dev                                      ----> merge dev with branch w
 
 
 								##### SERVER WORK #####
+git remote add origin https://github.com/test/test.git ---> add local project to github project (you need first create a new project on github.com)
 
-								
+git push origin master                             ----> push (send) local files to server on github 
+(git push -> git please send 
+"origin"  -> to server origin
+"master"  -> from branch "master")
+
+git clone https://github.com/test/test.git         ----> clone (copy) an existing project from github to local
+git pull origin master                             ----> take all changes from github to local (to master branch)
 
 					*** .gitignore file ***
 ### My template
