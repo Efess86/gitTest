@@ -1,15 +1,15 @@
 Before start using git!
 There are 3 stages in git.
 1. Deleted, non added or modified - when you have files that was changed or deleted or created. Any changes that you can imagine.
-2. Index status or stage status - when you add changed files to index or stage status by "git add filename" command
-3. Add to git (commit) - when you add staged or index files to git by using git "commit filename"
+2. Index status or stage status - when you add changed files to index or stage status by "git add test.js" command
+3. Add to git (commit) - when you add staged or index files to git by using "git commit test.js"
 It's local changes not server!!!
 ------------------------------------------
 After git commit you can upload changes to server by using git push (see more about git push below)
 
-https://git-scm.com/download/win                   ----> download git 
+https://git-scm.com/download/win                   ----> download git and install it
 
-Create folder (folder) and open git bash in this folder
+Create folder (or open folder) and open "git bash" (right click) in this folder
 
 git init                                           ----> initialize git in your directory
 git config user.name "Kolpaxidis V. (home PC)"     ----> configure git by adding your name
